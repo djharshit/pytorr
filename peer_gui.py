@@ -348,9 +348,9 @@ trck_frame_2.grid(row=0, column=0)
 trck_frame_2.grid_propagate(0)
 
 login_button = ttk.Button(trck_frame_2, text='Login',
-                          command=lambda: trck_frame_3.tkraise())
+                          command=trck_frame_3.tkraise)
 reg_button = ttk.Button(trck_frame_2, text='Register',
-                        command=lambda: trck_frame_4.tkraise())
+                        command=trck_frame_4.tkraise)
 discon_button = ttk.Button(trck_frame_2, text='Disconnect',
                            command=disconnect_tracker)
 login_button.grid(row=0, column=0, padx=30, pady=50)
@@ -454,7 +454,7 @@ file_name_label = ttk.Label(trck_frame_6, text='All Files')
 # files_menu = tk.OptionMenu(trck_frame_6, current_file, value=None)
 yes_button = ttk.Button(trck_frame_6, text='Get Detail', command=getfiledetail)
 no_button = ttk.Button(trck_frame_6, text='Cancel',
-                       command=lambda: trck_frame_5.tkraise())
+                       command=trck_frame_5.tkraise)
 download_button = ttk.Button(trck_frame_6, text='Download',
                              command=lambda: a.threading.Thread(target=download_file).start())
 file_detail_label = ttk.Label(trck_frame_6)
