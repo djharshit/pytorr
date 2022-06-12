@@ -163,7 +163,8 @@ class MyServer:
             threading.Thread(target=self.receive_msg,
                              args=[conn, peer_server_port]).start()
 
-    def receive_msg(self, conn, addr):
+    @staticmethod
+    def receive_msg(conn, addr):
         """Receive messages from the other peers.
 
         Args:
