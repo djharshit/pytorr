@@ -346,8 +346,6 @@ def main():
 
                 data = pickle.dumps(file_block)
                 data_length = str(len(data))
-
-                del fileop
             else:
                 data = pickle.dumps('No-File')
                 data_length = '100'
